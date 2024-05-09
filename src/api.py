@@ -15,7 +15,7 @@ from requests.structures import CaseInsensitiveDict
 from authlib.integrations.flask_client import OAuth
 from os import environ as env
 from flask_wtf import Form
-from forms import *
+from forms import * 
 
 app = Flask(__name__, template_folder='template')
 app.secret_key = env.get("APP_SECRET_KEY").encode('utf8') 
@@ -23,11 +23,8 @@ app.app_context().push()
 setup_db(app)
 CORS(app)
 oauth = OAuth(app)
-
-
     
 ''' 
-@TODO uncomment the following line to initialize the datbase
 !! NOTE THIS WILL DROP ALL RECORDS AND START YOUR DB FROM SCRATCH
 !! NOTE THIS MUST BE UNCOMMENTED ON FIRST RUN
 !! Running this funciton will add one 
@@ -35,7 +32,6 @@ oauth = OAuth(app)
 db_drop_and_create_all()
 auth_register(oauth)
 
-# ROUTES
 
 @app.route("/login")
 def login():
@@ -154,7 +150,7 @@ def update_actor(jwt):
         abort(404)
 
     try:
-        if data.getlist('name')[0] is not None:
+        if data.getlist('name')[0] != "":
             actor.name = data.getlist('name')[0]
         
         if data.getlist('age')[0] != "":
@@ -361,7 +357,7 @@ def delete_movie(jwt):
             return json.dumps({'success': False, 'error': "An error occurred" }), 500
 
 '''
-Example error handling for unprocessable entity
+Error handling 
 '''
 @app.errorhandler(401)
 def unprocessable(error):
@@ -370,76 +366,60 @@ def unprocessable(error):
     #     "error": 401,
     #     "message": "Permission Not found"
     # }), 401
-    return render_template('error.html', error=error, message= "You are not authorized!!!")
+    return render_template('error.html', error=error, message= "401-You are not authorized!!!")
 
 
 @app.errorhandler(422)
 def unprocessable(error):
-    return jsonify({
-        "success": False,
-        "error": 422,
-        "message": "unprocessable"
-    }), 422
+    # return jsonify({
+    #     "success": False,
+    #     "error": 422,
+    #     "message": "unprocessable"
+    # }), 422
+    return render_template('error.html', error=error, message= "422-Unprocessable!!")
 
-
-'''
-@TODO implement error handlers using the @app.errorhandler(error) decorator
-    each error handler should return (with approprate messages):
-             jsonify({
-                    "success": False,
-                    "error": 404,
-                    "message": "resource not found"
-                    }), 404
-'''
-
-'''
-@TODO implement error handler for 404
-    error handler should conform to general task above
-'''
 @app.errorhandler(404)
 def resource_not_found(error):
-    return jsonify({
-        "success": False,
-        "error": 404,
-        "message": "resource not found"
-    }), 404
+    # return jsonify({
+    #     "success": False,
+    #     "error": 404,
+    #     "message": "resource not found"
+    # }), 404
+    return render_template('error.html', error=error, message= "404-Resource not found!!")
 
-
-'''
-@TODO implement error handler for AuthError
-    error handler should conform to general task above
-'''
 @app.errorhandler(400)
 def bad_request(error):
-    print("inside bad request   ")
-    return jsonify({
-        "success": False,
-        "error": 400,
-        "message": 'Bad Request'
-    }), 400
-
+    # return jsonify({
+    #     "success": False,
+    #     "error": 400,
+    #     "message": 'Bad Request'
+    # }), 400
+    return render_template('error.html', error=error, message= "400-Bad Request!!")
 
 @app.errorhandler(405)
 def method_not_allowed(error):
-    print(error)
-    return jsonify({
-        "success": False,
-        "error": 405,
-        "message": 'Method Not Allowed'
-    }), 405
+    # print(error)
+    # return jsonify({
+    #     "success": False,
+    #     "error": 405,
+    #     "message": 'Method Not Allowed'
+    # }), 405
+    return render_template('error.html', error=error, message= "405-Method Not Allowed!!")
 
 @app.errorhandler(403)
 def permission_not_present(error):
-    return jsonify({
-        "success": False,
-        "error": 403,
-        "message": 'Permission Not Present'
-    }), 403    
+    # return jsonify({
+    #     "success": False,
+    #     "error": 403,
+    #     "message": 'Permission Not Present'
+    # }), 403    
+    return render_template('error.html', error=error, message= "403-Permission Not Found!!")
 
 @app.errorhandler(500)
 def error_present(error):
-    return jsonify({
-        "success": False,
-        "error": 500,
-        "message": 'An error occurred'
-    }), 500
+    # return jsonify({
+    #     "success": False,
+    #     "error": 500,
+    #     "message": 'An error occurred'
+    # }), 500
+    return render_template('error.html', error=error, message= "500-An error occurred!!")
