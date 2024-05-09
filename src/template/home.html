@@ -1,0 +1,11 @@
+{% if session %}
+  {% extends 'layouts/main.html' %}
+  {% block title %}New Movie{% endblock %}
+  {% block content %}
+      <h1>Welcome {{session.userinfo.name}}!</h1>
+      <p><a href="/logout">Logout</a></p>
+  {% endblock %}
+{% else %}
+    <h1>Welcome Guest</h1>
+    <p><a href="/login">Login</a></p>
+{% endif %}

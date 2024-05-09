@@ -1,0 +1,23 @@
+{% extends 'layouts/form.html' %}
+{% block title %}New Movie{% endblock %}
+{% block content %}
+  <div class="form-wrapper">
+    <form method="POST" class="form" action="/movies/delete">
+      <h3 class="form-heading">Delete movie <a href="{{ url_for('get_movies') }}" title="Back to homepage"><i class="fa fa-home pull-right"></i></a></h3>
+      <ul >
+        {% for movie in movies %}
+        <li>
+            <div >
+              <h5><input type="radio" id='{{ movie.id }}' name="movies" value='{{ movie.id }}'>
+              {{ movie.id }} {{ movie.title }} {{ movie.release_date }}</h5>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+       
+      <input type="submit" value="Delete Movie" class="btn btn-primary btn-lg btn-block">
+      <br>
+      <a href="{{ url_for('get_movies') }}" title="Back to homepage">Back</a>
+    </form>
+  </div>
+{% endblock %}

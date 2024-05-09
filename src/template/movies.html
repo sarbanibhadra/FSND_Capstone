@@ -1,0 +1,23 @@
+{% extends 'layouts/main.html' %}
+{% block title %}New Movie{% endblock %}
+{% block content %}
+<h4>List of Movies 🔥 🎥 🔥 </h4>
+      <ul >
+        {% for movie in movies %}
+        <li>
+            <div >
+            <h5>Movie ID: {{ movie.id }} </h5>
+            <h5>Movie Name: {{ movie.title }} </h5>
+            <h5>Movie Release Date: {{ movie.release_date }}</h5>
+            <h5>Cast: {{ movie.actors }}</h5>
+            </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <h3>
+        <a href="/movies/create"><button class="btn btn-default btn-lg">Add Movie</button></a>
+        <a href="/movies/delete"><button class="btn btn-default btn-lg">Delete Movie</button></a>
+        <a href="/movies/update"><button class="btn btn-default btn-lg">Update Movie</button></a>
+      </h3>
+
+{% endblock %}
