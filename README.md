@@ -26,3 +26,11 @@ At least two tests of RBAC for each role
 # Screenshots 
 1 Login screen
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/88f43bd1-6cd1-4e58-bb3e-557ebd1e58b0)
+2.Login and password entry screen from auth0
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/0e707744-bb6b-43b2-844e-5b8f460ba3d2)
+3.Home page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/eb5e2791-5f8b-401a-b899-d988f31e5a05)
+4. List of Movies page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/50a907ad-c5e1-4068-bcdd-bb3f679a0199)
+
+
