@@ -32,5 +32,15 @@ At least two tests of RBAC for each role
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/eb5e2791-5f8b-401a-b899-d988f31e5a05)
 4. List of Movies page
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/50a907ad-c5e1-4068-bcdd-bb3f679a0199)
+5. Add movies page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/efca7c82-c013-4ee4-a5cf-0f3c68f0ae62)
+6. Delete Movie page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/73aa898c-f12c-4591-8dcf-e42897bd42b3)
+7. Update Movie page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/8706e3df-afc8-47c8-9d6d-6ca53fd4f1f1)
+
+
+
+
 
 
