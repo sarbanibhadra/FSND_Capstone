@@ -38,6 +38,21 @@ At least two tests of RBAC for each role
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/73aa898c-f12c-4591-8dcf-e42897bd42b3)
 7. Update Movie page
 ![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/8706e3df-afc8-47c8-9d6d-6ca53fd4f1f1)
+8. List of Actors page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/222a967a-2b51-4786-86af-21196570d54f)
+9. Add Actor page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/73cb9416-1c2c-4276-bdf6-4be618b930ac)
+10. Delete Actor page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/a16aeb1e-8cc1-47dd-86af-d12817d57a9b)
+11. Update Actor page
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/49b21c24-d853-4ef2-93a8-6e9ac4eede3a)
+12 Logout screen
+![image](https://github.com/sarbanibhadra/FSND_Capstone/assets/28161929/0cb49f6a-d3b9-4deb-81ec-ac36b9d074b0)
+
+
+
+
+
 
 
 
